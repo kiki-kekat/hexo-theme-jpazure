@@ -3,7 +3,6 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
-banner: "images/banner.jpg"
 
 # Content
 excerpt_link: Read More
@@ -31,20 +30,18 @@ show_count: false
 # Miscellaneous
 google_analytics:
 gauges_analytics:
-favicon: /favicon.png
+# favicon links are in header.ejs
+# favicon: /favicon.png
 twitter:
+google_plus:
 fb_admins:
 fb_app_id:
 
-# valine comment system. https://valine.js.org
-valine:
-  enable: false # if you want use valine,please set this value is true
-  appId:  # leancloud application app id
-  appKey:  # leancloud application app key
-  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
-  verify: false # valine verify code (true/false)
-  pageSize: 10 # comment list page size
-  avatar: mm # gravatar style https://valine.js.org/#/avatar
-  lang: zh-cn # i18n: zh-cn/en
-  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
-  guest_info: nick,mail,link #valine comment header info
+root_tag_option:
+  root_tag_names:
+    - Azure AD
+    - AAD Connect
+    - AD FS
+    - 情報採取
+  sub_tag_limit: 20
+  sub_tag_sort: 'name' # 未実装

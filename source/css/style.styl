@@ -12,6 +12,11 @@ input, button
     border: 0
     padding: 0
 
+a
+  text-decoration: none
+a&:hover
+  text-decoration: underline
+
 @font-face
   font-family: FontAwesome
   font-style: normal
@@ -38,6 +43,7 @@ body
 
 .inner
   column(columns)
+  margin-left: header-title-size
 
 .left, .alignleft
   float: left
@@ -84,6 +90,7 @@ if sidebar is left
 @import "_partial/footer"
 @import "_partial/highlight"
 @import "_partial/mobile"
+@import "_partial/issue-header"
 
 if sidebar
   @import "_partial/sidebar"

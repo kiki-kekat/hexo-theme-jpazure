@@ -11,6 +11,16 @@
 .article-date
   @extend $block-caption
   float: left
+  margin-bottom: 0.5em !important
+
+.article-date-single
+  @extend $block-caption
+  /* float: left */
+  margin: 3px 0 0 0 !important
+  font-size: 14px !important
+  text-shadow: none !important
+  letter-spacing: 0 !important
+  font-weight: normal !important 
 
 .article-category
   float: left
@@ -26,23 +36,43 @@
   margin: 0 12px 1em
 
 .article-header
-  padding: article-padding article-padding 0
+  padding: 0 article-padding
+
+.article-header-single
+  padding: article-padding
+
+.article-share
+  color: #999
+  border-bottom: 1px solid #ddd
+  height: 20px
+  margin: 0 article-padding 0
+  a
+    color: color-grey
+    text-decoration: none
+  a&:hover
+      color: color-default
 
 .article-title
   text-decoration: none
   font-size: 2em
   font-weight: bold
   color: color-default
-  line-height: line-height-title
+  line-height: line-height-header-title
   transition: color 0.2s
   a&:hover
-    color: color-link
+    /*color: color-link*/
+
+.article-readmore
+  width: 100%
+  margin: 0 !important
+  text-align: right
+  
 
 .article-entry
   @extend $base-style
   clearfix()
   color: color-default
-  padding: 0 article-padding
+  padding: article-padding
   p, table
     line-height: line-height
     margin: line-height 0
@@ -79,9 +109,9 @@
     padding: 10px 0
   blockquote
     font-family: font-serif
-    font-size: 1.4em
+    font-style: italic
     margin: line-height 20px
-    text-align: center
+    background-color: #f6f6f6
     footer
       font-size: font-size
       margin: line-height 0
@@ -141,7 +171,7 @@
   font-size: 0.85em
   line-height: line-height
   border-top: 1px solid color-border
-  padding-top: line-height
+  padding-top: line-height * 0.5
   margin: 0 article-padding article-padding
   a
     color: color-grey
@@ -170,7 +200,16 @@
   margin-left: 20px
   &:before
     content: "\f064"
-    font-family: font-icon
+    font-family: FontAwesome
+    padding-right: 6px
+
+.article-github-link
+  cursor: pointer
+  float: right
+  margin-left: 20px
+  &:before
+    content: "\f09b"
+    font-family: FontAwesome
     padding-right: 6px
 
 #article-nav
@@ -214,7 +253,7 @@
 .article-nav-caption
   text-transform: uppercase
   letter-spacing: 2px
-  color: color-border
+  color: color-default
   line-height: 1em
   font-weight: bold
   #article-nav-newer &
@@ -274,6 +313,7 @@ $article-share-link
   @extend $article-share-link
   &:before
     content: "\f099"
+    font-family: FontAwesome
   &:hover
     background: color-twitter
     text-shadow: 0 1px darken(color-twitter, 20%)
@@ -282,6 +322,7 @@ $article-share-link
   @extend $article-share-link
   &:before
     content: "\f09a"
+    font-family: FontAwesome
   &:hover
     background: color-facebook
     text-shadow: 0 1px darken(color-facebook, 20%)
@@ -290,6 +331,7 @@ $article-share-link
   @extend $article-share-link
   &:before
     content: "\f0d2"
+    font-family: FontAwesome
   &:hover
     background: color-pinterest
     text-shadow: 0 1px darken(color-pinterest, 20%)
@@ -297,10 +339,20 @@ $article-share-link
 .article-share-linkedin
   @extend $article-share-link
   &:before
-    content: "\f0e1"
+    content: "\f08c"
+    font-family: FontAwesome
   &:hover
     background: color-linkedin
-    text-shadow: 0 1px darken(color-linkedin, 20%)
+    text-shadow: 0 1px darken(color-pinterest, 20%)
+    
+.article-share-google
+  @extend $article-share-link
+  &:before
+    content: "\f0d5"
+    font-family: FontAwesome
+  &:hover
+    background: color-google
+    text-shadow: 0 1px darken(color-google, 20%)
 
 .article-gallery
   background: #000
