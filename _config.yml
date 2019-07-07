@@ -11,11 +11,11 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
-- category
-- tag
-- tagcloud
-- archive
+# - category
 - recent_posts
+- tag
+- archive
+- tagcloud
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -37,11 +37,8 @@ google_plus:
 fb_admins:
 fb_app_id:
 
-root_tag_option:
-  root_tag_names:
-    - Azure AD
-    - AAD Connect
-    - AD FS
-    - 情報採取
-  sub_tag_limit: 20
-  sub_tag_sort: 'name' # 未実装
+# use hexo.config instead of  theme.config
+# root_tag_option:
+#   root_tag_names: 'all'
+#   sub_tag_limit: 20
+#   sub_tag_sort: 'name' # 未実装
