@@ -9,7 +9,12 @@
         Last Update: 
         <%- partial('post/date', {class_name: 'article-date-single', date_format: null}) %>
         <%- partial('post/category') %>
-        <a href="https://github.com/jpazureid/blog/issues/new?title=<%- post.title %>&body=Page: <%- post.path.slice(0, -1) %>" class="article-github-link" target="_blank" rel="noopener noreferrer">問題を報告</a>
+        <% if(config.github.url){
+          var github = githubData(config, post);
+        %>
+        <a href="<%- github.issueUrl %>" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <a href="<%- github.sourceUrl %>" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <% } %>
         <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       </div>
     <% } %>
