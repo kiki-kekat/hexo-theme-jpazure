@@ -13,7 +13,7 @@
           var github = githubData(config, post);
         %>
         <a href="<%- github.issueUrl %>" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
-        <a href="<%- github.sourceUrl %>" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <a href="<%- github.editUrl %>" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
         <% } %>
         <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       </div>
