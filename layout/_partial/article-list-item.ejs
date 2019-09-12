@@ -27,7 +27,7 @@
       <% } else { %>
         <%- post.content.replace(/<(".*?"|'.*?'|[^'"])*?>/g, "").substr(0, 400) + "..."%>
         <p class="article-readmore">
-          <%- partial('post/title', {class_name: 'article-title'}).match(/\s*<h1.*>\n\s*(<a .*>.*<\/a>)\n\s*<\/h1>/)[1].replace(/article-title/g, "").replace(/>.*</g, ">Read more...<") %>
+          <a href="<%- url_for(post.path) %>">Read more</a>
         </p>
       <% } %>
     </div>
