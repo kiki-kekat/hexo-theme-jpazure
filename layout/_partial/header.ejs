@@ -14,6 +14,9 @@
           <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
         <% } %>
       </nav>
+      <div id="search-form-wrap">
+        <%- bing_serch_form({text: __('search')}) %>
+      </div>
     </div>
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
