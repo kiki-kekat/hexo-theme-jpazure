@@ -2,12 +2,6 @@
   <% page.posts.each(function(post){ %>
     <%- partial('article-list-item', {post: post, index: true}) %>
   <% }) %>
-<%} else if(pagination == 3) { %>
-  <% var all_posts = site.posts.sort('date', -1) %>
-  <h2 class='widget-title'>
-    全記事一覧
-  </h2>
-  <%- partial('all-articles', {posts: all_posts, index: true}) %>
 <%} else{ %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
