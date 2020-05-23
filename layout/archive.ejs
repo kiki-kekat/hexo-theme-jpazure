@@ -1,1 +1,8 @@
-<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
+<h2 class='widget-title'>
+    全記事一覧
+</h2>
+<%
+    // ordered by date
+    var posts = site.posts.sort('date', -1)
+%>
+<%- partial('_partial/all-articles', {posts: posts, index: true}) %>

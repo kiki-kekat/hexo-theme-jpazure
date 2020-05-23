@@ -1,0 +1,7 @@
+<% posts.each(function(post, i){ %>
+  <section class="all-articles-wrap">
+    <div class="archives">
+    <%- partial('all-articles-post', {post: post, even: i % 2 == 0}) %>
+    </div>
+  </section>
+<%}) %>
