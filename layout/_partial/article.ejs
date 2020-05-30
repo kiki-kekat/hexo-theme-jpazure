@@ -1,6 +1,9 @@
 <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
   <div class="article-inner">
     <%- partial('post/gallery') %>
+    <% if(config.github.url){
+        var github = githubData(config, post);
+    } %>
     <% if (post.link || post.title){ %>
       <header class="article-header-single">
         <%- partial('post/title', {class_name: 'article-title'}) %>
@@ -9,7 +12,10 @@
         Last Update: 
         <%- partial('post/date', {class_name: 'article-date-single', date_format: null}) %>
         <%- partial('post/category') %>
-        <a href="https://github.com/jpazureid/blog/issues/new?title=<%- post.title %>&body=Page: <%- post.path.slice(0, -1) %>" class="article-github-link" target="_blank" rel="noopener noreferrer">問題を報告</a>
+        <% if(github){
+        %>
+        <a href="<%- github.issueUrl %>" class="article-github-issue-link" target="_blank" rel="noopener noreferrer">feedback</a>
+        <% } %>
         <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
       </div>
     <% } %>
@@ -24,12 +30,21 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (!post.disableDisclaimer && config.disclaimer){ %>
+      <div class="article-disclaimer">
+          <p><%- config.disclaimer%></p>
+      </div>
+      <% } %>
     </div>
     <footer class="article-footer">
       <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
       <% } %>
       <%- partial('post/tag') %>
+        <% if(github){
+        %>
+        <a href="<%- github.editUrl %>" class="article-github-edit-link" target="_blank" rel="noopener noreferrer">GitHub で編集</a>
+        <% } %>
     </footer>
   </div>
   <% if (!index){ %>

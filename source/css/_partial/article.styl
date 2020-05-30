@@ -81,6 +81,7 @@
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
+    /* color: #f60 */
   a
     color: color-link
     text-decoration: none
@@ -93,7 +94,7 @@
     max-width: 100%
     height: auto
     display: block
-    margin: auto
+    /* margin: auto */ /* [makotsur] delete style 'margin auto = centering style' */
   iframe
     border: none
   table
@@ -203,7 +204,7 @@
     font-family: FontAwesome
     padding-right: 6px
 
-.article-github-link
+.article-github-issue-link
   cursor: pointer
   float: right
   margin-left: 20px
@@ -211,6 +212,21 @@
     content: "\f09b"
     font-family: FontAwesome
     padding-right: 6px
+
+.article-github-edit-link
+  cursor: pointer
+  float: right
+  margin-left: 20px
+  &:before
+    content: "\f044"
+    font-family: FontAwesome
+    padding-right: 6px
+
+.article-disclaimer
+  font-family: font-serif
+  font-style: italic
+  margin: line-height 20px
+  background-color: #f6f6f6
 
 #article-nav
   clearfix()
@@ -226,7 +242,6 @@
 
 .article-nav-link-wrap
   text-decoration: none
-  text-shadow: 0 1px #fff
   color: color-grey
   box-sizing: border-box
   margin-top: block-margin
@@ -393,14 +408,12 @@ $article-gallery-ctrl
     position: absolute
     top: 50%
     margin-top: @font-size * -0.5
-
 .article-gallery-prev
   @extend $article-gallery-ctrl
   left: 0
   &:before
     content: "\f053"
     left: 15px
-
 .article-gallery-next
   @extend $article-gallery-ctrl
   right: 0
