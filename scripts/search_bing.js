@@ -9,5 +9,3 @@ function bingSearchFormHelper(options = {}) {
 }
 
 hexo.extend.helper.register('bing_serch_form', bingSearchFormHelper);
-
-

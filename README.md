@@ -3,7 +3,6 @@
 hexo theme for jpazure tech blog
 
 > forked from [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape)
-
 ## Set Up
 
 ```sh
@@ -27,5 +26,4 @@ root_tag_generator:
 github:
   url: https://github.com/jpazureid/blog/
   posts_dir: articles
-
 ```

@@ -81,6 +81,7 @@
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
     margin: line-height-title 0
+    /* color: #f60 */
   a
     color: color-link
     text-decoration: none
@@ -407,14 +408,12 @@ $article-gallery-ctrl
     position: absolute
     top: 50%
     margin-top: @font-size * -0.5
-
 .article-gallery-prev
   @extend $article-gallery-ctrl
   left: 0
   &:before
     content: "\f053"
     left: 15px
-
 .article-gallery-next
   @extend $article-gallery-ctrl
   right: 0
