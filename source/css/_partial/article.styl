@@ -424,9 +424,19 @@ $article-gallery-ctrl
 
 .headerlink
   cursor: pointer
-  float: right
-  margin-left: 20px
+  float: left
+  margin-left: -0.7em
+  visibility: hidden
+  transition:visibility 1s
   &:before
     content: "\f0c1"
     font-family: FontAwesome
-    padding-right: 6px
+    font-size: smaller
+
+h1:hover .headerlink{
+  visibility: visible
+}
+
+h2:hover .headerlink{
+  visibility: visible
+}
