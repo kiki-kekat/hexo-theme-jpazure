@@ -31,9 +31,18 @@
         <%- post.content %>
       <% } %>
       <% if (!post.disableDisclaimer && config.disclaimer){ %>
-      <div class="article-disclaimer">
+        <div class="article-disclaimer">
+        <% if (Array.isArray(config.disclaimer)) { 
+          for(var line of config.disclaimer){  
+        %>
+          <p><%- line %></p>
+        <%
+           }  
+        } else { 
+        %>
           <p><%- config.disclaimer%></p>
-      </div>
+        <% } %>
+        </div>
       <% } %>
     </div>
     <footer class="article-footer">
