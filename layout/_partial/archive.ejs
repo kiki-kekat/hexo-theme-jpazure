@@ -2,7 +2,7 @@
   <% page.posts.each(function(post){ %>
     <%- partial('article-list-item', {post: post, index: true}) %>
   <% }) %>
-<% } else { %>
+<%} else{ %>
   <% var last; %>
   <% page.posts.each(function(post, i){ %>
     <% var year = post.date.year(); %>
