@@ -27,5 +27,4 @@ root_tag_generator:
 github:
   url: https://github.com/jpazureid/blog/
   posts_dir: articles
-
 ```

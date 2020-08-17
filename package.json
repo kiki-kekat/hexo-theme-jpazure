@@ -8,5 +8,11 @@
     "grunt-contrib-copy": "~1.0.0",
     "grunt-git": "^1.0.14",
     "load-grunt-tasks": "~3.5.2"
+  },
+  "dependencies": {
+    "hexo": "^4.2.1",
+    "hexo-generator-root-tag": "https://github.com/jpazureid/hexo-generator-root-tag.git",
+    "minimist": "^1.2.5",
+    "yargs-parser": "^18.1.3"
   }
 }
