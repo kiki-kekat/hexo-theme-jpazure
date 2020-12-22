@@ -3,10 +3,7 @@
 hexo theme for jpazure tech blog
 
 > forked from [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape)
-<<<<<<< HEAD
-=======
 
->>>>>>> 30d9320b73a5ec995477b3ef52cf4106401a2068
 ## Set Up
 
 ```sh
