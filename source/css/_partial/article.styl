@@ -63,9 +63,24 @@
     /*color: color-link*/
 
 .article-readmore
-  width: 100%
-  margin: 0 !important
-  text-align: right
+width: 100%
+  margin: 1.6em 0 !important
+  /*text-align: right*/
+
+.article-readmore a
+  display: inline-block
+  line-height: 1em
+  padding: 6px 15px
+  border-radius: 15px
+  background: color-background
+  color: #737373 !important
+  text-shadow: 0 1px #fff
+  text-decoration: none
+  &:hover
+    background: color-link
+    color: #fff !important
+    text-decoration: none !important
+    text-shadow: 0 1px darken(color-link, 20%)
   
 
 .article-entry
@@ -87,6 +102,32 @@
     text-decoration: none
     &:hover
       text-decoration: underline
+  
+/*  h1,h2,h3
+    position: relative
+    &:hover
+      .headerlink
+        opacity: 1
+
+  .headerlink
+    cursor: pointer
+    position: absolute
+    top: 0.1em
+    left: -0.6em
+    opacity: 0
+    transition:visibility 1s
+    color: color-grey
+    vertical-align: middle
+    &:hover
+      text-decoration: none
+    &:before
+      position: absolute;
+      content: "\f0c1"
+      font-family: FontAwesome
+      font-size: 0.6em
+      transform: rotate(-45deg);
+*/
+
   ul, ol, dl
     margin-top: line-height
     margin-bottom: line-height
@@ -109,14 +150,16 @@
     border-bottom: 1px solid color-border
     padding: 10px 0
   blockquote
-    font-family: font-serif
+    /*font-family: font-serif*/
+    font-family: SourceHanCodeJP
     font-style: italic
     margin: line-height 20px
     background-color: #f6f6f6
     footer
       font-size: font-size
       margin: line-height 0
-      font-family: font-sans
+      /*font-family: font-sans*/
+      font-family: SourceHanCodeJP
       cite
         &:before
           content: "—"
@@ -223,7 +266,8 @@
     padding-right: 6px
 
 .article-disclaimer
-  font-family: font-serif
+  /*font-family: font-serif*/
+  font-family: SourceHanCodeJP
   font-style: italic
   margin: line-height 20px
   background-color: #f6f6f6
